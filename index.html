@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tomorqa Kuzatuv — AI Ko'chat Monitoring</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🌱 Tomorqa Kuzatuv</h1>
+  <p>Ko'chatlaringizni AI yordamida kuzating</p>
+</header>
+
+<main>
+
+  <!-- API kalit kiritish -->
+  <section class="card" id="apiKeySection">
+    <h2>1. API kalitni kiriting</h2>
+    <p class="hint">Anthropic Console (console.anthropic.com) dan olingan API kalitingizni kiriting. U faqat shu brauzeringizda saqlanadi.</p>
+    <input type="password" id="apiKeyInput" placeholder="sk-ant-...">
+    <button id="saveApiKeyBtn">Saqlash</button>
+    <span id="apiKeyStatus"></span>
+  </section>
+
+  <!-- Yangi ko'chat qo'shish -->
+  <section class="card">
+    <h2>2. Yangi ko'chat qo'shish</h2>
+    <input type="text" id="plantName" placeholder="Ko'chat nomi (masalan: Pomidor #1)">
+    <button id="addPlantBtn">+ Ko'chat qo'shish</button>
+  </section>
+
+  <!-- Ko'chatlar ro'yxati -->
+  <section id="plantsList"></section>
+
+</main>
+
+<!-- Tahlil natijasi modal -->
+<div id="reportModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-btn" id="closeModal">&times;</span>
+    <h2 id="reportTitle">Hisobot</h2>
+    <div id="reportBody" class="report-body"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
